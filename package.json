@@ -1,0 +1,10 @@
+{
+  "name": "student-kart-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Student Kart responsive e-commerce store with Supabase admin and hourly sale rotation.",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  }
+}
