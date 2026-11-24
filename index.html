@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Kart — Good finds. Fair prices. | Bags &amp; Beauty for Students</title>
+<meta name="description" content="Student Kart — student-led online store from University of Kamalia. Trendy bags, skincare & beauty products at student-friendly prices. COD + Easypaisa available.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#e95c9b; --pink-deep:#d13d82; --pink-soft:#ffd9ea;
+  --lav:#a78bfa; --lav-soft:#ece4ff;
+  --blue:#7cc3ff; --blue-soft:#e3f2ff;
+  --yellow:#ffd166; --green:#34c98e;
+  --ink:#241531; --ink-soft:#6b5b7b; --cream:#fff7fb; --card:#ffffff;
+  --grad:linear-gradient(120deg,#e95c9b,#a78bfa 55%,#7cc3ff);
+  --shadow:0 10px 30px -12px rgba(233,92,155,.35);
+  --r:22px; --r-sm:14px;
+  --font-head:'Outfit',system-ui,sans-serif; --font-body:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,select,textarea{font-family:inherit;font-size:15px}
+a{color:var(--pink-deep);text-decoration:none}
+.container{width:min(1200px,92%);margin:0 auto}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
+section{scroll-margin-top:90px}
+
+/* ===== ticker ===== */
+.ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;font-size:13px;font-weight:700;padding:9px 0}
+.ticker-track{display:inline-block;animation:tick 28s linear infinite}
+.ticker span{margin:0 26px}
+.ticker b{color:var(--yellow)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== header ===== */
+header{position:sticky;top:0;z-index:60;background:rgba(255,247,251,.88);backdrop-filter:blur(14px);border-bottom:1px solid #ffe3f1}
+.nav{display:flex;align-items:center;gap:14px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--font-head);font-weight:900;font-size:clamp(19px,3vw,24px)}
+.logo-badge{width:42px;height:42px;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-size:22px;box-shadow:var(--shadow)}
+.logo small{display:block;font-size:10px;font-weight:500;color:var(--ink-soft);letter-spacing:.4px}
+.nav-links{display:flex;gap:4px;margin-left:8px}
+.nav-links a{padding:8px 13px;border-radius:999px;font-weight:700;font-size:14px;color:var(--ink);transition:.2s}
+.nav-links a:hover{background:var(--pink-soft);color:var(--pink-deep)}
+.nav-spacer{flex:1}
+.searchbox{position:relative;flex:0 1 300px}
+.searchbox input{width:100%;padding:10px 38px 10px 16px;border-radius:999px;border:2px solid #ffd9ea;background:#fff;font-size:14px;outline:none;transition:.2s}
+.searchbox input:focus{border-color:var(--pink)}
+.searchbox .si{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:15px}
+.icon-btn{position:relative;width:44px;height:44px;border-radius:14px;background:#fff;border:2px solid #ffd9ea;font-size:19px;display:grid;place-items:center;transition:.2s}
+.icon-btn:hover{border-color:var(--pink);transform:translateY(-2px)}
+.cart-count{position:absolute;top:-7px;right:-7px;background:var(--pink);color:#fff;font-size:11px;font-weight:800;min-width:20px;height:20px;border-radius:999px;display:grid;place-items:center;padding:0 5px;border:2px solid #fff}
+.menu-btn{display:none}
+
+/* mobile nav chips */
+.m-nav{display:none;gap:8px;overflow-x:auto;padding:8px 4%;-webkit-overflow-scrolling:touch}
+.m-nav a{flex:0 0 auto;background:#fff;border:2px solid #ffd9ea;padding:7px 15px;border-radius:999px;font-weight:700;font-size:13px;color:var(--ink)}
+.m-nav a.active{background:var(--pink);border-color:var(--pink);color:#fff}
+
+/* ===== hero ===== */
+.hero{padding:34px 0 20px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--pink-soft);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:700}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(30px,5.4vw,56px);font-weight:900;margin:16px 0 6px;letter-spacing:-.5px}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--ink-soft);font-size:clamp(15px,2vw,17px);max-width:480px;line-height:1.6}
+.hero-ctas{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;font-weight:800;font-size:15px;font-family:var(--font-head);transition:.22s;border:2px solid transparent}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02)}
+.btn-wa{background:#22c55e;color:#fff;box-shadow:0 10px 30px -12px rgba(34,197,94,.5)}
+.btn-wa:hover{transform:translateY(-3px)}
+.btn-ghost{background:#fff;border-color:#ffd9ea;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--pink)}
+.btn-sm{padding:9px 16px;font-size:13px}
+.hero-img{position:relative}
+.hero-img img{border-radius:36px;box-shadow:var(--shadow);aspect-ratio:2/1;object-fit:cover;width:100%}
+.hero-sticker{position:absolute;background:#fff;border-radius:16px;padding:10px 16px;font-weight:800;font-size:13px;box-shadow:0 12px 30px -10px rgba(36,21,49,.25);animation:float 4s ease-in-out infinite}
+.hs1{top:-16px;left:-10px;border:2px solid var(--pink-soft)}
+.hs2{bottom:18px;right:-8px;border:2px solid var(--lav-soft);animation-delay:1.3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.trust{background:#fff;border:2px solid #ffe3f1;border-radius:var(--r);padding:14px;display:flex;gap:11px;align-items:center}
+.trust .t-ico{font-size:22px;width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--pink-soft)}
+.trust b{font-size:14px;display:block;font-family:var(--font-head)}
+.trust span{font-size:12px;color:var(--ink-soft)}
+
+/* ===== sale strip ===== */
+.sale-strip{margin:34px 0 0;background:var(--ink);border-radius:26px;color:#fff;padding:22px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;position:relative;overflow:hidden}
+.sale-strip::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:.16}
+.sale-strip>*{position:relative}
+.sale-title{font-family:var(--font-head);font-weight:900;font-size:clamp(17px,2.4vw,22px)}
+.sale-title small{display:block;font-weight:500;font-size:12.5px;color:#e9d9ff;margin-top:3px}
+.sale-timer{display:flex;gap:8px;margin-left:auto}
+.t-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:8px 12px;text-align:center;min-width:56px}
+.t-box b{font-family:var(--font-head);font-size:20px;display:block}
+.t-box span{font-size:10px;color:#cbb8e8;letter-spacing:1px}
+
+/* ===== sections ===== */
+.sec{padding:44px 0 8px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(23px,3.6vw,34px);font-weight:900;letter-spacing:-.4px}
+.sec-head .kicker{font-size:12.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+.sec-head p{color:var(--ink-soft);font-size:14px;margin-top:6px;max-width:560px}
+.cat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
+.cat-card{border-radius:26px;padding:24px;color:#fff;position:relative;overflow:hidden;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;transition:.25s;cursor:pointer}
+.cat-card:hover{transform:translateY(-5px) scale(1.015)}
+.cat-card .cc-emoji{position:absolute;top:14px;right:16px;font-size:44px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.2))}
+.cat-card h3{font-size:clamp(18px,2.6vw,24px);font-weight:900}
+.cat-card p{font-size:13px;opacity:.92;margin-top:4px}
+.cc1{background:linear-gradient(135deg,#e95c9b,#f790b9)}
+.cc2{background:linear-gradient(135deg,#a78bfa,#c9b8fd)}
+.cc3{background:linear-gradient(135deg,#7cc3ff,#a9d6ff)}
+
+/* ===== product grid ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:18px}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;border:2px solid #ffeef6;transition:.25s;position:relative;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--pink-soft)}
+.card-img{position:relative;aspect-ratio:4/4.6;overflow:hidden;background:var(--pink-soft)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .card-img img{transform:scale(1.06)}
+.badge-sale{position:absolute;top:12px;left:12px;background:var(--pink);color:#fff;font-weight:900;font-size:12px;padding:6px 11px;border-radius:999px;box-shadow:0 6px 14px -4px rgba(233,92,155,.6);font-family:var(--font-head)}
+.badge-hot{position:absolute;top:12px;right:12px;background:var(--yellow);color:#5b3d00;font-weight:800;font-size:11px;padding:6px 10px;border-radius:999px}
+.card-body{padding:15px 16px 17px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-name{font-family:var(--font-head);font-weight:800;font-size:15.5px;line-height:1.3}
+.art-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--ink-soft);background:#f6f1fb;border:1px solid #e9defa;border-radius:8px;padding:3px 9px;width:fit-content;font-family:'DM Sans',monospace}
+.color-chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.color-dot{width:13px;height:13px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1.5px #e9defa}
+.card-desc{font-size:12.8px;color:var(--ink-soft);line-height:1.5;flex:1}
+.price-row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-top:2px}
+.price-now{font-family:var(--font-head);font-weight:900;font-size:20px;color:var(--pink-deep)}
+.price-old{font-size:13.5px;color:#b3a6bf;text-decoration:line-through;font-weight:600}
+.price-save{font-size:11px;font-weight:800;color:#0e7a55;background:#dcf7ec;border-radius:8px;padding:3px 8px}
+.card-actions{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:8px}
+.btn-add{background:var(--ink);color:#fff;border-radius:13px;padding:11px 14px;font-weight:800;font-size:13.5px;font-family:var(--font-head);transition:.2s}
+.btn-add:hover{background:var(--pink-deep)}
+.btn-buy{width:44px;border-radius:13px;background:#22c55e;color:#fff;font-size:19px;display:grid;place-items:center;transition:.2s}
+.btn-buy:hover{transform:scale(1.06)}
+
+/* ===== real stock ===== */
+.stock-scroll{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.stock-card{flex:0 0 min(340px,80vw);scroll-snap-align:start;background:#fff;border-radius:var(--r);overflow:hidden;border:2px solid #ffeef6}
+.stock-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.stock-cap{padding:12px 15px;font-size:13px}
+.stock-cap b{font-family:var(--font-head);display:block;font-size:14px}
+.stock-cap span{color:var(--ink-soft)}
+.verified{display:inline-flex;align-items:center;gap:6px;color:#0e7a55;font-weight:800;font-size:12px}
+
+/* ===== how to order ===== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:#fff;border:2px solid #ffeef6;border-radius:var(--r);padding:22px;position:relative}
+.step-num{width:40px;height:40px;border-radius:13px;background:var(--grad);color:#fff;font-family:var(--font-head);font-weight:900;font-size:19px;display:grid;place-items:center;margin-bottom:13px}
+.step h3{font-size:17px;font-weight:800;margin-bottom:6px}
+.step p{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+
+/* ===== payment ===== */
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pay-card{background:#fff;border:2px solid #ffeef6;border-radius:var(--r);padding:24px}
+.pay-card.recommended{border-color:var(--pink);box-shadow:var(--shadow);position:relative}
+.recommended .rec-tag{position:absolute;top:-13px;left:22px;background:var(--pink);color:#fff;font-size:11px;font-weight:900;padding:5px 13px;border-radius:999px;letter-spacing:.5px}
+.pay-card h3{font-size:19px;display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.pay-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.65}
+.easypaisa-box{margin-top:14px;background:linear-gradient(135deg,#fff3e0,#ffe6ee);border:2px dashed #f0a86b;border-radius:16px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.easypaisa-box b{font-family:var(--font-head);font-size:18px;letter-spacing:.5px}
+.copy-btn{background:var(--ink);color:#fff;border-radius:10px;padding:8px 14px;font-size:12.5px;font-weight:800}
+.copy-btn:hover{background:var(--pink-deep)}
+
+/* ===== team ===== */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.member{background:#fff;border:2px solid #ffeef6;border-radius:var(--r);padding:20px;display:flex;gap:14px;align-items:center}
+.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-head);font-weight:900;font-size:20px;color:#fff;flex-shrink:0}
+.member b{font-family:var(--font-head);font-size:15.5px;display:block}
+.member span{font-size:12.5px;color:var(--pink-deep);font-weight:700;display:block;margin-top:2px}
+.member p{font-size:12px;color:var(--ink-soft);margin-top:3px;line-height:1.5}
+
+/* ===== founder ===== */
+.founder{background:var(--ink);border-radius:30px;color:#fff;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(20px,4vw,44px);align-items:center;position:relative;overflow:hidden}
+.founder::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:.14}
+.founder>*{position:relative}
+.founder-photo{position:relative}
+.founder-photo img{border-radius:26px;aspect-ratio:4/5;object-fit:cover;width:100%;border:3px solid rgba(255,255,255,.25);box-shadow:0 20px 50px -18px rgba(0,0,0,.5)}
+.founder-tag{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(255,255,255,.92);color:var(--ink);border-radius:14px;padding:10px 14px;font-weight:800;font-size:13px;font-family:var(--font-head)}
+.founder .kicker{color:var(--yellow);font-weight:800;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+.founder h2{font-size:clamp(24px,3.6vw,36px);font-weight:900;margin-bottom:4px}
+.founder .role{color:#f7b8d8;font-weight:700;font-size:15px;margin-bottom:14px}
+.founder p{color:#d8ccec;font-size:14.5px;line-height:1.75;margin-bottom:10px}
+.founder .btn{margin-top:12px}
+
+/* ===== contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c-card{background:#fff;border:2px solid #ffeef6;border-radius:var(--r);padding:24px;display:flex;gap:15px;align-items:flex-start}
+.c-card .c-ico{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;font-size:23px;flex-shrink:0}
+.c-card h3{font-size:16.5px;margin-bottom:4px}
+.c-card p{font-size:13px;color:var(--ink-soft);line-height:1.6}
+.c-card .c-val{font-weight:800;font-size:15px;color:var(--ink);display:block;margin-top:6px;word-break:break-all}
+.contact-form{background:#fff;border:2px solid #ffeef6;border-radius:var(--r);padding:clamp(20px,3vw,30px)}
+.contact-form h3{font-size:20px;margin-bottom:6px}
+.contact-form>p{font-size:13.5px;color:var(--ink-soft);margin-bottom:18px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12.5px;font-weight:800;color:var(--ink)}
+.field label .req{color:var(--pink)}
+.field input,.field select,.field textarea{border:2px solid #f3e6f3;border-radius:13px;padding:12px 14px;background:#fffdfefe;outline:none;transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--pink)}
+.field textarea{resize:vertical;min-height:90px}
+.field .hint{font-size:11px;color:#a394b3}
+
+/* ===== footer ===== */
+footer{background:var(--ink);color:#cbb8e8;margin-top:60px;padding:44px 0 100px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot-brand{font-family:var(--font-head);font-weight:900;font-size:24px;color:#fff;display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.foot-grid p,.foot-grid a{font-size:13.5px;line-height:1.9;color:#cbb8e8}
+.foot-grid a:hover{color:#fff}
+.foot-grid h4{color:#fff;font-size:15px;margin-bottom:10px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px}
+.admin-link{color:#8f7fb0!important;font-size:12px}
+
+/* ===== FAB + mobile bar ===== */
+.fab-wa{position:fixed;right:18px;bottom:86px;z-index:70;width:56px;height:56px;border-radius:50%;background:#22c55e;color:#fff;font-size:28px;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(34,197,94,.6);transition:.2s}
+.fab-wa:hover{transform:scale(1.1)}
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:65;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:2px solid #ffe3f1;padding:10px 4.5%;display:none;align-items:center;gap:12px}
+.mobile-bar .mb-total{font-size:12px;color:var(--ink-soft);font-weight:700}
+.mobile-bar .mb-total b{display:block;font-family:var(--font-head);font-size:18px;color:var(--ink)}
+.mobile-bar .btn{flex:1;padding:12px}
+
+/* ===== cart drawer ===== */
+.overlay{position:fixed;inset:0;background:rgba(36,21,49,.55);backdrop-filter:blur(3px);z-index:80;opacity:0;pointer-events:none;transition:.25s}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:-420px;width:min(420px,94vw);height:100dvh;background:#fff;z-index:85;transition:.3s;display:flex;flex-direction:column}
+.drawer.show{right:0}
+.drawer-head{padding:18px 20px;border-bottom:2px solid #ffeef6;display:flex;justify-content:space-between;align-items:center}
+.drawer-head h3{font-size:19px}
+.x-btn{width:38px;height:38px;border-radius:12px;background:var(--pink-soft);font-size:16px;display:grid;place-items:center}
+.drawer-items{flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:13px}
+.cart-empty{text-align:center;color:var(--ink-soft);padding:40px 10px;font-size:14px}
+.cart-empty .big{font-size:46px;display:block;margin-bottom:10px}
+.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;background:#fffdfefe;border:2px solid #ffeef6;border-radius:16px;padding:10px}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:12px}
+.cart-item .ci-name{font-weight:800;font-size:13.5px;font-family:var(--font-head);line-height:1.3}
+.cart-item .ci-art{font-size:11px;color:var(--ink-soft)}
+.cart-item .ci-price{font-weight:900;color:var(--pink-deep);font-size:14.5px}
+.qty-ctrl{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty-ctrl button{width:26px;height:26px;border-radius:8px;background:var(--pink-soft);font-weight:900;font-size:14px;display:grid;place-items:center}
+.qty-ctrl b{font-size:13.5px;min-width:18px;text-align:center}
+.drawer-foot{padding:16px 20px;border-top:2px solid #ffeef6;background:#fff}
+.total-row{display:flex;justify-content:space-between;font-size:14px;color:var(--ink-soft);margin-bottom:4px}
+.total-row.grand{font-family:var(--font-head);font-weight:900;font-size:19px;color:var(--ink);margin:8px 0 14px}
+.sale-note{font-size:11.5px;color:#a394b3;text-align:center;margin-top:10px;line-height:1.5}
+
+/* ===== modals ===== */
+.modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;opacity:0;pointer-events:none;transition:.25s}
+.modal.show{opacity:1;pointer-events:auto}
+.modal-card{background:#fff;border-radius:26px;width:min(640px,100%);max-height:92dvh;overflow-y:auto;padding:clamp(20px,3.5vw,32px);transform:translateY(14px);transition:.25s}
+.modal.show .modal-card{transform:translateY(0)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.modal-head h3{font-size:clamp(19px,3vw,24px)}
+.pay-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.pay-opt{border:2px solid #f3e6f3;border-radius:16px;padding:14px;cursor:pointer;transition:.2s}
+.pay-opt input{accent-color:var(--pink);margin-right:8px}
+.pay-opt.selected{border-color:var(--pink);background:var(--pink-soft)}
+.pay-opt b{font-size:14px;font-family:var(--font-head)}
+.pay-opt span{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.ep-detail{background:#fff8ec;border:2px dashed #f0a86b;border-radius:14px;padding:12px 14px;font-size:12.5px;line-height:1.7;margin-top:12px;display:none}
+.ep-detail.show{display:block}
+.order-success{text-align:center;padding:14px 0}
+.order-success .os-emoji{font-size:56px}
+.order-success h3{margin:10px 0 6px}
+.order-success p{font-size:14px;color:var(--ink-soft);line-height:1.7}
+.os-id{display:inline-block;background:var(--ink);color:#fff;font-family:var(--font-head);font-weight:800;padding:8px 18px;border-radius:12px;margin:12px 0;letter-spacing:1px}
+.os-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+
+/* ===== admin ===== */
+.admin-modal .modal-card{width:min(980px,100%)}
+.admin-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:14px;flex-wrap:wrap}
+.a-tab{padding:9px 18px;border-radius:999px;font-weight:800;font-size:13px;background:#f6f1fb;color:var(--ink-soft);border:2px solid transparent}
+.a-tab.active{background:var(--ink);color:#fff}
+.a-panel{display:none}
+.a-panel.active{display:block}
+.a-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.a-table-wrap{overflow-x:auto;border:2px solid #ffeef6;border-radius:16px}
+.a-table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+.a-table th{background:var(--pink-soft);text-align:left;padding:11px 12px;font-family:var(--font-head);font-size:12px;position:sticky;top:0}
+.a-table td{padding:10px 12px;border-top:1px solid #ffeef6;vertical-align:middle}
+.a-table img{width:44px;height:44px;object-fit:cover;border-radius:10px}
+.mini-btn{padding:7px 12px;border-radius:10px;font-weight:800;font-size:12px;background:#f6f1fb;color:var(--ink)}
+.mini-btn.danger{background:#ffe3e3;color:#c02929}
+.mini-btn.go{background:var(--ink);color:#fff}
+.mini-btn:hover{filter:brightness(.94)}
+.a-status{font-size:12.5px;padding:10px 14px;border-radius:12px;margin-top:10px;line-height:1.6}
+.a-status.ok{background:#dcf7ec;color:#0e7a55}
+.a-status.err{background:#ffe3e3;color:#c02929}
+.a-status.info{background:var(--blue-soft);color:#175a8a}
+.prod-form{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:6px}
+.order-detail{background:#fffdfefe;border:2px solid #ffeef6;border-radius:14px;padding:14px;font-size:13px;line-height:1.8;margin-bottom:12px}
+.order-detail pre{white-space:pre-wrap;font-family:var(--font-body);font-size:12.5px}
+
+/* toast */
+#toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;font-weight:700;z-index:120;opacity:0;pointer-events:none;transition:.3s;max-width:92vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* hide when searching */
+.card.hide{display:none}
+.sec.hide{display:none}
+
+/* ===== responsive ===== */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-img{order:-1}
+  .cat-cards{grid-template-columns:1fr 1fr 1fr}
+  .trust-row{grid-template-columns:1fr 1fr}
+  .founder{grid-template-columns:1fr;gap:24px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .nav-links{display:none}
+  .menu-btn{display:grid;order:1}
+  .m-nav{display:flex}
+  .searchbox{order:3;flex:1 0 100%;margin-top:8px}
+  #cartBtn{order:2}
+  .nav{flex-wrap:wrap;row-gap:0}
+  .nav-spacer{flex:1}
+  .cat-cards{grid-template-columns:1fr}
+  .cat-card{min-height:120px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .card-body{padding:12px 13px 14px}
+  .card-name{font-size:14px}
+  .price-now{font-size:17.5px}
+  .steps,.team-grid,.pay-grid,.contact-grid{grid-template-columns:1fr}
+  .trust-row{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .mobile-bar{display:flex}
+  .fab-wa{bottom:80px;right:14px;width:50px;height:50px;font-size:24px}
+  .sale-timer{margin-left:0;width:100%}
+  .form-grid,.pay-options,.prod-form{grid-template-columns:1fr}
+  .sec{padding:34px 0 4px}
+  footer{padding:36px 0 120px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<!-- ===== ticker ===== -->
+<div class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<!-- ===== header ===== -->
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo">
+      <span class="logo-badge">🛒</span>
+      <span>Student Kart<small>Good finds. Fair prices.</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#bags">Bags 👜</a>
+      <a href="#skincare">Skincare 🧴</a>
+      <a href="#beauty">Beauty 💄</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-spacer"></div>
+    <div class="searchbox">
+      <input type="search" id="searchInput" placeholder="Search bags, serum, masks… 🔍" aria-label="Search products">
+      <span class="si">🔎</span>
+    </div>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <button class="icon-btn" id="cartBtn" aria-label="Cart">🧺<span class="cart-count" id="cartCount">0</span></button>
+  </div>
+  <nav class="m-nav" id="mNav">
+    <a href="#bags">👜 Bags 👜</a><a href="#skincare">Skincare 🧴</a><a href="#beauty">Beauty 💄</a>
+    <a href="#stock">Real Stock 📸</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== hero ===== -->
+<div class="hero container" id="top">
+  <div class="hero-grid">
+    <div>
+      <span class="pill"><span class="dot"></span> University of Kamalia se — students ke liye 💗</span>
+      <h1>Trendy Finds,<br><span class="grad">Student Prices.</span></h1>
+      <p class="sub">Bags, skincare aur beauty products — selected with care by a team of 6 students. Cash on Delivery all over Pakistan 🇵🇰 aur Easypaisa bhi available hai.</p>
+      <div class="hero-ctas">
+        <a href="#bags" class="btn btn-primary">🛍️ Shop Deals</a>
+        <a href="#" class="btn btn-wa" id="heroWaBtn" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+        <a href="#about" class="btn btn-ghost">Our Story ✨</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/hero.jpg" alt="Student Kart — trendy bags and beauty products for university students" loading="eager">
+      <div class="hero-sticker hs1">🔥 Sale 13%–19%</div>
+      <div class="hero-sticker hs2">🚚 COD Available</div>
+    </div>
+  </div>
+  <div class="trust-row">
+    <div class="trust"><span class="t-ico">🎒</span><div><b>Student-Led Brand</b><span>6 students from UKM</span></div></div>
+    <div class="trust"><span class="t-ico">💵</span><div><b>Fair Prices</b><span>Rs 150 – Rs 1300 range</span></div></div>
+    <div class="trust"><span class="t-ico">📦</span><div><b>Cash on Delivery</b><span>Har city mein available</span></div></div>
+    <div class="trust"><span class="t-ico">📲</span><div><b>Easypaisa</b><span>0318-8492094</span></div></div>
+  </div>
+</div>
+
+<!-- ===== sale strip ===== -->
+<div class="container">
+  <div class="sale-strip">
+    <div class="sale-title">⚡ Hourly Flash Sale <small>13%–19% discount — har ghantay badalti hai! Price abhi lock karo 🔒</small></div>
+    <div class="sale-timer" id="saleTimer">
+      <div class="t-box"><b id="tH">00</b><span>HRS</span></div>
+      <div class="t-box"><b id="tM">00</b><span>MIN</span></div>
+      <div class="t-box"><b id="tS">00</b><span>SEC</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== categories ===== -->
+<section class="sec container">
+  <div class="sec-head">
+    <div><div class="kicker">Shop by category</div><h2>Chuno apni favourite category 💝</h2></div>
+  </div>
+  <div class="cat-cards">
+    <div class="cat-card cc1" onclick="scrollToId('bags')"><span class="cc-emoji">👜</span><h3>Bags</h3><p>Trendy hobos &amp; crossbody bags — <span id="countBags"></span> styles</p></div>
+    <div class="cat-card cc2" onclick="scrollToId('skincare')"><span class="cc-emoji">🧴</span><h3>Skincare</h3><p>Serums, masks &amp; whitening care — <span id="countSkin"></span> items</p></div>
+    <div class="cat-card cc3" onclick="scrollToId('beauty')"><span class="cc-emoji">💄</span><h3>Beauty</h3><p>Makeup essentials under Rs 500 — <span id="countBeauty"></span> items</p></div>
+  </div>
+</section>
+
+<!-- ===== product sections (rendered by JS) ===== -->
+<section class="sec container" id="bags"><div class="sec-head"><div><div class="kicker">Collection 01 — Student favourite</div><h2>Bags 👜</h2><p>Campus-ready hobos &amp; crossbodies — har bag aap ke outfit pe cinematic lagta hai. Sale price alag alag hourly basis pe.</p></div></div><div class="grid" id="grid-bags"></div></section>
+<section class="sec container" id="skincare"><div class="sec-head"><div><div class="kicker">Collection 02 — Glow up</div><h2>Skincare 🧴</h2><p>Serums, sheet masks, whitening care — sab kuch Rs 500 se neeche, students ke budget mein.</p></div></div><div class="grid" id="grid-skincare"></div></section>
+<section class="sec container" id="beauty"><div class="sec-head"><div><div class="kicker">Collection 03 — Makeup &amp; glam</div><h2>Beauty 💄</h2><p>BB cream, foundation stick, compact aur lip gloss — perfect uni look ke liye.</p></div></div><div class="grid" id="grid-beauty"></div></section>
+<section class="sec container hide" id="searchSec"><div class="sec-head"><div><div class="kicker">Search results</div><h2>Results 🔍</h2></div></div><div class="grid" id="grid-search"></div></section>
+
+<!-- ===== real stock ===== -->
+<section class="sec container" id="stock">
+  <div class="sec-head">
+    <div><div class="kicker">No fake photos — real stock 📸</div><h2>Hamara Actual Stock</h2><p>Ye photos hamari team khud ne li hain — jo dikh raha hai wohi deliver hota hai. Sana ji stock khud select aur check karti hain.</p></div>
+    <span class="verified">✔ Team-verified stock</span>
+  </div>
+  <div class="stock-scroll">
+    <div class="stock-card"><img src="images/stock-bags.jpg" alt="Bags real stock" loading="lazy"><div class="stock-cap"><b>👜 Bags Collection</b><span>6 trendy styles — camel se cream tak 🤎</span></div></div>
+    <div class="stock-card"><img src="images/stock-cosmetics.jpg" alt="Cosmetics real stock" loading="lazy"><div class="stock-cap"><b>Makeup &amp; Serums</b><span>BB cream, foundation stick, Gluta serum</span></div></div>
+    <div class="stock-card"><img src="images/stock-cosmetics2.jpg" alt="More cosmetics stock" loading="lazy"><div class="stock-cap"><b>Skincare Haul</b><span>Compacts, creams, soaps aur masks</span></div></div>
+    <div class="stock-card"><img src="images/stock-masks.jpg" alt="Sheet masks stock" loading="lazy"><div class="stock-cap"><b>Sheet Masks 🍓</b><span>Strawberry, peach, rice, aloe — sab flavours</span></div></div>
+    <div class="stock-card"><img src="images/stock-masks2.jpg" alt="Masks close-up" loading="lazy"><div class="stock-cap"><b>Mask Party Kit</b><span>Glow-up nights ke liye best 😍</span></div></div>
+  </div>
+</section>
+
+<!-- ===== how to order ===== -->
+<section class="sec container">
+  <div class="sec-head"><div><div class="kicker">Super simple</div><h2>Order kaise karein? 🛒</h2></div></div>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><h3>Cart mein dalo 🧺</h3><p>Pasand ka product choose karo, "Add to Cart" dabao. Sale price khud apply ho jata hai.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Details bharo 📝</h3><p>Checkout form mein naam, phone, city aur address likho. Payment: COD ya Easypaisa.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>WhatsApp pe confirm 💬</h3><p>Order WhatsApp par <b>0318-8492094</b> par chala jata hai + email bhi milta hai. Team confirm kar ke delivery arrange karti hai.</p></div>
+  </div>
+</section>
+
+<!-- ===== payment ===== -->
+<section class="sec container" id="payment">
+  <div class="sec-head"><div><div class="kicker">Easy payment</div><h2>Payment Options 💳</h2></div></div>
+  <div class="pay-grid">
+    <div class="pay-card recommended"><span class="rec-tag">MOST POPULAR</span>
+      <h3>💵 Cash on Delivery</h3>
+      <p>Paise tab do jab parcel haath mein ho. Pehle parcel dekho, phir payment karo — bilkul risk-free. Delivery charges confirmation call par decide hote hain.</p>
+    </div>
+    <div class="pay-card">
+      <h3>📲 Easypaisa</h3>
+      <p>Advance payment Easypaisa se bhejo aur screenshot WhatsApp par share karo — order turant confirm!</p>
+      <div class="easypaisa-box">
+        <div><span style="font-size:11px;color:#8a5a2b;font-weight:700">EASYPAINSA NUMBER</span><br><b id="epNum">0318-8492094</b></div>
+        <button class="copy-btn" onclick="copyText('03188492094')">📋 Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== about + team ===== -->
+<section class="sec container" id="about">
+  <div class="sec-head"><div><div class="kicker">Our story — made by students, for students</div><h2>Student Kart ke peeche 6 doston ki team hai 🤝</h2><p>Hum sab University of Kamalia (UKM) ke BS E-Commerce &amp; Digital Marketing ke students hain. Hum ne dekha ke students — especially girls — trendy bags aur beauty products ki fan hain lekin market prices unaffordable hote hain. Student Kart ka simple idea hai: <b>good-quality, useful aur trendy products, student-friendly prices par.</b> Stock khud wholesale se select karte hain, quality check karte hain, aur reselling karte hain — koi beech ka dalal nahi, is liye rate sasta rehta hai.</p></div></div>
+  <div class="team-grid">
+    <div class="member"><span class="avatar" style="background:linear-gradient(135deg,#e95c9b,#f790b9)">S</span><div><b>Sana</b><span>Team Leader — Product &amp; Stock</span><p>Main stock select karti hain aur quality check karti hain.</p></div></div>
+    <div class="member"><span class="avatar" style="background:linear-gradient(135deg,#a78bfa,#c9b8fd)">H</span><div><b>Huma</b><span>Marketing</span><p>Promotion aur marketing plans handle karti hain.</p></div></div>
+    <div class="member"><span class="avatar" style="background:linear-gradient(135deg,#7cc3ff,#a9d6ff)">A</span><div><b>Areeba</b><span>Product Support &amp; Customer Care</span><p>Products arrange karti hain aur customers ki madad karti hain.</p></div></div>
+    <div class="member"><span class="avatar" style="background:linear-gradient(135deg,#ffd166,#ffb3c6)">Z</span><div><b>Zulkaif Akbar</b><span>Website &amp; Digital Operations</span><p>Website, social media aur digital operations dekhta hoon.</p></div></div>
+    <div class="member"><span class="avatar" style="background:linear-gradient(135deg,#34c98e,#7be0b8)">H</span><div><b>Haseeb Khalid</b><span>Logistics &amp; Delivery</span><p>Parcels safe customers tak pohanchata hoon.</p></div></div>
+    <div class="member"><span class="avatar" style="background:linear-gradient(135deg,#f97316,#fdba74)">A</span><div><b>Abdullah</b><span>Sales &amp; Customer Care</span><p>Order handling aur payment confirmation karta hoon.</p></div></div>
+  </div>
+</section>
+
+<!-- ===== founder spotlight ===== -->
+<section class="sec container">
+  <div class="founder">
+    <div class="founder-photo">
+      <img src="images/founder.jpg" alt="Zulkaif Akbar at University of Kamalia entrance" loading="lazy">
+      <div class="founder-tag">🎓 University of Kamalia — Entrance</div>
+    </div>
+    <div>
+      <div class="kicker">Core Partner Spotlight</div>
+      <h2>Zulkaif Akbar</h2>
+      <div class="role">Co-Founder &amp; Digital Core Member — Student Kart</div>
+      <p>Assalam-o-Alaikum! 👋 Main <b>Zulkaif Akbar</b> hoon — Student Kart ka core partner. Website, social media aur digital operations mera domain hai: jo website aap dekh rahe hain, wo maine design aur develop ki hai. Ek student ke tor par main jaanta hoon ke budget ke andar <i>acha</i> products dhoondhna kitna mushkil hai — is liye Student Kart ka har price main khud check karta hoon.</p>
+      <p>Mera mission simple hai: har student ko trendy, quality products milen bina zyada kharch ke. Mere baare mein aur meri digital journey ke baare mein poori detail mere personal website par available hai — zaroor visit karein!</p>
+      <a href="https://zulkaifakbarofficial.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">✨ Know more about Zulkaif Akbar</a>
+      <div style="margin-top:14px;font-size:13px;color:#cbb8e8">📧 <a href="mailto:zulkaifakbar6@gmail.com" style="color:#f7b8d8">zulkaifakbar6@gmail.com</a> · 💬 <a href="https://wa.me/923188492094" target="_blank" rel="noopener" style="color:#f7b8d8">0318-8492094</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== contact ===== -->
+<section class="sec container" id="contact">
+  <div class="sec-head"><div><div class="kicker">We reply fast ⚡</div><h2>Contact Us 💬</h2><p>Koi sawal hai? Bulk order chahiye? Ya apna stock humein bechna chahte ho? Seedha WhatsApp karo ya neeche form bharo — email humein direct milta hai.</p></div></div>
+  <div class="contact-grid" style="margin-bottom:16px">
+    <div class="c-card"><span class="c-ico" style="background:#dcfce7">💬</span><div><h3>WhatsApp Orders</h3><p>Fastest way — order ya sawal, seedha message karo.</p><a class="c-val" href="https://wa.me/923188492094" target="_blank" rel="noopener">+92 318 8492094</a></div></div>
+    <div class="c-card"><span class="c-ico" style="background:var(--pink-soft)">📧</span><div><h3>Email</h3><p>Business inquiries aur collaborations ke liye.</p><a class="c-val" href="mailto:zulkaifakbar6@gmail.com">zulkaifakbar6@gmail.com</a></div></div>
+  </div>
+  <form class="contact-form" id="contactForm">
+    <h3>Message Bhejo ✉️</h3>
+    <p>Form submit hote hi message email par <b>zulkaifakbar6@gmail.com</b> aa jata hai.</p>
+    <div class="form-grid">
+      <div class="field"><label>Naam <span class="req">*</span></label><input type="text" id="cfName" required placeholder="Apna naam likhein"></div>
+      <div class="field"><label>Phone / WhatsApp <span class="req">*</span></label><input type="tel" id="cfPhone" required placeholder="03XX-XXXXXXX"></div>
+      <div class="field full"><label>Message <span class="req">*</span></label><textarea id="cfMsg" required placeholder="Aap kya poochna chahte hain?"></textarea></div>
+      <div class="field full"><button type="submit" class="btn btn-primary" style="width:100%" id="cfSubmit">📨 Send Message</button><span class="hint" id="cfStatus"></span></div>
+    </div>
+  </form>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <div class="foot-brand">🛒 Student Kart</div>
+      <p>Made by students, for students. A student-led startup from University of Kamalia (UKM) — good-quality, trendy products at student-friendly prices.</p>
+      <p style="margin-top:10px">📧 <a href="mailto:zulkaifakbar6@gmail.com">zulkaifakbar6@gmail.com</a><br>💬 <a href="https://wa.me/923188492094" target="_blank" rel="noopener">+92 318 8492094</a></p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#bags">👜 Bags</a><br><a href="#skincare">Skincare</a><br><a href="#beauty">Beauty</a><br><a href="#stock">Real Stock</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="#about">About &amp; Team</a><br><a href="#payment">Payment Options</a><br><a href="https://zulkaifakbarofficial.vercel.app" target="_blank" rel="noopener">Zulkaif Akbar Official</a><br>
+      <a href="#" class="admin-link" onclick="openAdmin(event)">🔒 Admin / Seller Login</a>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 Student Kart · University of Kamalia, Kamalia, Punjab</span>
+    <span>Good finds. Fair prices. 💗</span>
+  </div>
+</footer>
+
+<!-- FAB + mobile bar -->
+<a href="https://wa.me/923188492094?text=Assalam-o-Alaikum!%20Student%20Kart%20se%20order%20karna%20hai" class="fab-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div class="mobile-bar">
+  <div class="mb-total">Cart total<b id="mbTotal">Rs 0</b></div>
+  <button class="btn btn-primary" onclick="openCart()">🧺 View Cart &amp; Checkout</button>
+</div>
+
+<!-- overlay + cart drawer -->
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head"><h3>Aap ka Cart 🧺</h3><button class="x-btn" onclick="closeAll()">✕</button></div>
+  <div class="drawer-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Items</span><b id="cartQty">0</b></div>
+    <div class="total-row grand"><span>Total (sale prices)</span><span id="cartTotal">Rs 0</span></div>
+    <button class="btn btn-primary" style="width:100%" onclick="openCheckout()">✅ Checkout — Order Place Karo</button>
+    <div class="sale-note">⚡ Sale discounts har ghantay refresh hoti hain — cart mein price lock nahi hoti, checkout par final price apply hoti hai.</div>
+  </div>
+</aside>
+
+<!-- checkout modal -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-card">
+    <div id="checkoutFormView">
+      <div class="modal-head"><h3>Order Details 📝</h3><button class="x-btn" onclick="closeAll()">✕</button></div>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" id="coName" required placeholder="e.g. Ayesha Khan"></div>
+          <div class="field"><label>Phone / WhatsApp <span class="req">*</span></label><input type="tel" id="coPhone" required placeholder="03XX-XXXXXXX"></div>
+          <div class="field"><label>City <span class="req">*</span></label><input type="text" id="coCity" required placeholder="e.g. Kamalia"></div>
+          <div class="field"><label>Email (optional)</label><input type="email" id="coEmail" placeholder="confirmation ke liye"></div>
+          <div class="field full"><label>Complete Delivery Address <span class="req">*</span></label><textarea id="coAddress" required placeholder="House / Street / Area — mukammal address likhein"></textarea></div>
+          <div class="field full"><label>Payment Method <span class="req">*</span></label>
+            <div class="pay-options">
+              <label class="pay-opt selected" id="optCOD"><input type="radio" name="pay" value="COD" checked onchange="payChange('COD')"><b>💵 Cash on Delivery</b><span>Parcel milne par payment — recommended</span></label>
+              <label class="pay-opt" id="optEP"><input type="radio" name="pay" value="Easypaisa" onchange="payChange('EP')"><b>📲 Easypaisa</b><span>Advance payment + screenshot</span></label>
+            </div>
+            <div class="ep-detail" id="epDetail">Easypaisa par payment karein: <b>0318-8492094</b> (Student Kart)<br>Payment ke baad screenshot WhatsApp par bhejein — order confirm ho jayega.</div>
+          </div>
+          <div class="field full"><label>Order Notes (optional)</label><input type="text" id="coNotes" placeholder="koi special instruction?"></div>
+          <div class="field full"><div class="order-detail" id="coSummary"></div></div>
+          <div class="field full">
+            <button type="submit" class="btn btn-primary" style="width:100%" id="coSubmit">🚀 Place Order (WhatsApp + Email)</button>
+            <span class="hint">Order WhatsApp par 0318-8492094 ko bheja jayega aur email par zulkaifakbar6@gmail.com ko. Aap ki details sirf order ke liye use hoti hain.</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="checkoutSuccess" style="display:none">
+      <div class="order-success">
+        <div class="os-emoji">🎉</div>
+        <h3>Order received, shukriya!</h3>
+        <div class="os-id" id="osId"></div>
+        <p id="osMsg"></p>
+        <div class="os-actions">
+          <a class="btn btn-wa" id="osWaBtn" target="_blank" rel="noopener">💬 WhatsApp Send Karo</a>
+          <button class="btn btn-ghost" onclick="closeAll();clearCart()">🧺 Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- admin modal -->
+<div class="modal admin-modal" id="adminModal">
+  <div class="modal-card">
+    <div id="adminGate">
+      <div class="modal-head"><h3>🔐 Seller Login</h3><button class="x-btn" onclick="closeAll()">✕</button></div>
+      <p style="font-size:13.5px;color:var(--ink-soft);line-height:1.7">Student Kart ka private admin area — products, prices aur Supabase settings manage karne ke liye. Password daalein (default: <b>studentkart2026</b> — baad mein change kar sakte hain).</p>
+      <div class="field" style="margin-top:14px"><label>Admin Password</label><input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter')adminLogin()"></div>
+      <button class="btn btn-primary" style="width:100%;margin-top:14px" onclick="adminLogin()">Unlock 🔓</button>
+      <div class="a-status err" id="adminGateErr" style="display:none"></div>
+    </div>
+    <div id="adminPanel" style="display:none">
+      <div class="modal-head"><h3>⚙️ Admin Dashboard</h3><div style="display:flex;gap:8px"><button class="mini-btn" onclick="adminLogout()">Logout</button><button class="x-btn" onclick="closeAll()">✕</button></div></div>
+      <div class="admin-tabs">
+        <button class="a-tab active" data-tab="aProducts" onclick="aTab('aProducts')">📦 Products</button>
+        <button class="a-tab" data-tab="aOrders" onclick="aTab('aOrders')">🧾 Orders</button>
+        <button class="a-tab" data-tab="aSale" onclick="aTab('aSale')">⚡ Sale Settings</button>
+        <button class="a-tab" data-tab="aSupa" onclick="aTab('aSupa')">🗄️ Supabase</button>
+        <button class="a-tab" data-tab="aGuide" onclick="aTab('aGuide')">📖 Guide</button>
+      </div>
+
+      <div class="a-panel active" id="aProducts">
+        <div class="a-row">
+          <button class="mini-btn go" onclick="showProdForm(-1)">➕ Add Product</button>
+          <button class="mini-btn" onclick="exportProducts()">⬇️ Export JSON</button>
+          <button class="mini-btn" onclick="importProducts()">⬆️ Import JSON</button>
+          <button class="mini-btn danger" onclick="resetProducts()">♻️ Reset to Defaults</button>
+          <span style="font-size:12px;color:var(--ink-soft)" id="prodCount"></span>
+        </div>
+        <div class="a-table-wrap"><table class="a-table" id="aTable"></table></div>
+        <div id="prodFormWrap" style="display:none;margin-top:16px;border:2px solid var(--lav-soft);border-radius:18px;padding:18px">
+          <h4 style="margin-bottom:12px" id="prodFormTitle">Product</h4>
+          <div class="prod-form">
+            <div class="field"><label>Name</label><input id="pfName" type="text"></div>
+            <div class="field"><label>Article No.</label><input id="pfArt" type="text" placeholder="SK-XX-000"></div>
+            <div class="field"><label>Category</label><select id="pfCat"><option>Bags</option><option>Skincare</option><option>Beauty</option><option>Haircare</option></select></div>
+            <div class="field"><label>Price (PKR)</label><input id="pfPrice" type="number" min="1"></div>
+            <div class="field"><label>Colour / Variant</label><input id="pfColor" type="text"></div>
+            <div class="field"><label>Image URL</label><input id="pfImg" type="text" placeholder="images/....jpg ya Supabase Storage URL"></div>
+            <div class="field full"><label>Description</label><input id="pfDesc" type="text"></div>
+            <div class="field"><label><input type="checkbox" id="pfHot"> Hot badge</label></div>
+            <div class="field"><label><input type="checkbox" id="pfActive"> Active (visible on site)</label></div>
+            <div class="field full" style="display:flex;gap:10px"><button class="btn btn-primary btn-sm" onclick="saveProdForm()">💾 Save Product</button><button class="mini-btn" onclick="hideProdForm()">Cancel</button></div>
+          </div>
+        </div>
+        <div class="a-status info" id="aProdStatus" style="display:none"></div>
+      </div>
+
+      <div class="a-panel" id="aOrders">
+        <p style="font-size:13px;color:var(--ink-soft);margin-bottom:12px;line-height:1.6">Ye wo orders hain jo <b>is browser</b> se place hue (WhatsApp/Email ke saath bhi gaye hain). Emails <b>zulkaifakbar6@gmail.com</b> par aate hain.</p>
+        <div id="aOrdersList"></div>
+      </div>
+
+      <div class="a-panel" id="aSale">
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px">Har product par hourly random sale lagti hai. Range set karein (default 13%–19%). Original price wahi rehti hai jo aap ne di — sale price usi se calculate hoti hai, is liye profit hamesha safe hai. 👍</p>
+        <div class="prod-form">
+          <div class="field"><label>Min Discount %</label><input id="saleMin" type="number" min="0" max="90"></div>
+          <div class="field"><label>Max Discount %</label><input id="saleMax" type="number" min="1" max="95"></div>
+          <div class="field full"><button class="btn btn-primary btn-sm" onclick="saveSale()">💾 Save Sale Settings</button></div>
+        </div>
+        <div class="a-status info" id="aSaleStatus" style="display:none"></div>
+      </div>
+
+      <div class="a-panel" id="aSupa">
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px">Apna Supabase project connect karein. Database URL aur <b>anon/publishable key</b> (service key kabhi nahi!) paste karein. Table <b>products</b> aur setup SQL file <b>supabase_setup.sql</b> mein di gayi hai — pehle wo Supabase SQL Editor mein run karein. Writes (Push) ke liye neeche Supabase Auth mein sign-in zaroori hai — RLS is liye lagi hai ke koi random visitor products change na kar sake.</p>
+        <div class="prod-form">
+          <div class="field full"><label>Supabase Project URL</label><input id="sbUrl" type="text" placeholder="https://xxxxx.supabase.co"></div>
+          <div class="field full"><label>Supabase Anon Key</label><input id="sbKey" type="password" placeholder="eyJhbGciOi... (anon key)"></div>
+          <div class="field"><label>Table Name</label><input id="sbTable" type="text" value="products"></div>
+          <div class="field" style="display:flex;align-items:flex-end"><div style="width:100%"><button class="btn btn-primary btn-sm" style="width:100%" onclick="supaSave()">💾 Save &amp; Test</button></div></div>
+          <div class="field full" style="border-top:2px dashed #f3e6f3;padding-top:14px">
+            <label>🔐 Admin Sign-In (Supabase Auth account — Push/Write ke liye zaroori)</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <input id="sbEmail" type="email" placeholder="aap ka Supabase admin email">
+              <input id="sbPass" type="password" placeholder="Supabase account password">
+            </div>
+            <div style="margin-top:10px"><button class="mini-btn go" onclick="supaSignIn()">🔐 Sign In</button> <button class="mini-btn" onclick="supaSignOut()">Sign Out</button> <span style="font-size:12px;color:var(--ink-soft)" id="sbAuthState"></span></div>
+          </div>
+          <div class="field full" style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="mini-btn" onclick="supaPull()">⬇️ Pull Products (Supabase → Site)</button>
+            <button class="mini-btn" onclick="supaPush()">⬆️ Push Products (Site → Supabase)</button>
+            <button class="mini-btn danger" onclick="supaClear()">Disconnect</button>
+          </div>
+        </div>
+        <div class="a-status info" id="aSupaStatus" style="display:none"></div>
+      </div>
+
+      <div class="a-panel" id="aGuide">
+        <div class="order-detail">
+<b>Supabase se products manage karne ka tarika:</b><br><br>
+1️⃣ supabase.com par project kholo → SQL Editor → <b>supabase_setup.sql</b> file ka pura SQL paste kar ke Run karo.<br>
+2️⃣ Project Settings → API → <b>Project URL</b> aur <b>anon public key</b> copy karo.<br>
+3️⃣ Is site ke Admin → 🗄️ Supabase tab mein paste kar ke <b>Save &amp; Test</b> dabao.<br>
+4️⃣ Ab do tareeqay hain:<br>
+&nbsp;&nbsp;• <b>Push</b>: site ke current products Supabase mein save ho jayenge.<br>
+&nbsp;&nbsp;• <b>Pull</b>: Supabase ka data site par show hoga.<br>
+5️⃣ Baar baar edit karne ke liye best tareeqa: Supabase Table Editor mein <b>products</b> table kholo aur seedha edit karo (name, price, image URL, active) — changes turant website par aa jayenge.<br>
+6️⃣ Images ke liye Supabase Storage mein <b>product-images</b> bucket banao (SQL khud bana dega), photos upload karo aur unka public URL product ke <b>img</b> field mein paste karo.<br>
+7️⃣ Orders email par aate hain (FormSubmit activation zaroori hai — README dekho).<br><br>
+⚠️ <b>Yaad rakho:</b> anon key public hoti hai, is liye SQL mein RLS policies already laga di gayi hain — customers sirf active products dekh sakte hain, orders sirf insert kar sakte hain, kuch aur nahi.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<script>
+/* ================= STUDENT KART — APP ================= */
+/* CONFIG */
+const STORE = {
+  waNumber: '923188492094',
+  waDisplay: '+92 318 8492094',
+  easypaisa: '0318-8492094',
+  email: 'zulkaifakbar6@gmail.com',
+  founderSite: 'https://zulkaifakbarofficial.vercel.app'
+};
+const LS = { products:'sk_products_v1', settings:'sk_settings_v1', cart:'sk_cart_v1', orders:'sk_orders_v1' };
+const DEFAULT_SETTINGS = { min:13, max:19, adminPass:'studentkart2026', sbUrl:'', sbKey:'', sbTable:'products' };
+
+/* DEFAULT INVENTORY — Supabase se override hota hai */
+const DEFAULT_PRODUCTS = [
+  /* ---------- BAGS (Rs 600–1300) ---------- */
+  {id:'sk-bg-001',art:'SK-BG-001',name:'Camel Crescent Hobo Bag',cat:'Bags',color:'Camel Tan',price:1149,img:'images/bag-camel.jpg',desc:'Soft-touch crescent hobo, roomy interior — campus ki har photo mein perfect.',hot:true,active:true},
+  {id:'sk-bg-002',art:'SK-BG-002',name:'Midnight Leopard Hobo Bag',cat:'Bags',color:'Black + Leopard Scarf',price:1299,img:'images/bag-leopard-black.jpg',desc:'Black hobo with free leopard print silk scarf styling — bold aur elegant.',hot:true,active:true},
+  {id:'sk-bg-003',art:'SK-BG-003',name:'Maroon Twist-Lock Hobo',cat:'Bags',color:'Burgundy + Gold Lock',price:1199,img:'images/bag-maroon-lock.jpg',desc:'Premium matte burgundy finish with golden twist-lock clasp — full vibe.',hot:false,active:true},
+  {id:'sk-bg-004',art:'SK-BG-004',name:'Cloud Cream Structured Bag',cat:'Bags',color:'Off-White Cream',price:1249,img:'images/bag-cream.jpg',desc:'Structured square shape, wide shoulder strap + gift printed scarf included.',hot:true,active:true},
+  {id:'sk-bg-005',art:'SK-BG-005',name:'Silk-Scarf Crossbody',cat:'Bags',color:'Maroon + Gold Silk Scarf',price:849,img:'images/bag-maroon-silk.jpg',desc:'Flap crossbody with gold-striped silk scarf detail — party ready look.',hot:false,active:true},
+  {id:'sk-bg-006',art:'SK-BG-006',name:'Ribbon Bow Crossbody',cat:'Bags',color:'Maroon + Rust Ribbon',price:749,img:'images/bag-maroon-ribbon.jpg',desc:'Cute flap crossbody with rust ribbon bow — light daily carry for uni.',hot:false,active:true},
+  /* ---------- SKINCARE (Rs 150–500) ---------- */
+  {id:'sk-sc-101',art:'SK-SC-101',name:'Gluta White Whitening Serum',cat:'Skincare',color:'30ml Dropper Bottle',price:499,img:'images/skincare-serum-white.jpg',desc:'Gluta White whitening serum — glass dropper bottle, glow-up essential.',hot:true,active:true},
+  {id:'sk-sc-102',art:'SK-SC-102',name:'Sadoer Niacinamide Essence',cat:'Skincare',color:'Pink Box',price:479,img:'images/skincare-serum-pink.jpg',desc:'Niacinamide whitening + anti-wrinkle essence — smooth clear skin.',hot:false,active:true},
+  {id:'sk-sc-103',art:'SK-SC-103',name:'Gluta Gleam Facial Wash',cat:'Skincare',color:'Box of 4 Pouches',price:449,img:'images/skincare-wash.jpg',desc:'Deep-clean facial wash bulk pack — poori month ki supply.',hot:false,active:true},
+  {id:'sk-sc-104',art:'SK-SC-104',name:'Strawberry Tender Smooth Mask',cat:'Skincare',color:'Pack of 2 🍓',price:199,img:'images/skincare-masks.jpg',desc:'Strawberry sheet mask — instant softness aur glow.',hot:true,active:true},
+  {id:'sk-sc-105',art:'SK-SC-105',name:'Peach Glow Facial Mask',cat:'Skincare',color:'Pack of 3 🍑',price:249,img:'images/skincare-masks.jpg',desc:'Peach essence masks — hydrating freshness for movie nights.',hot:false,active:true},
+  {id:'sk-sc-106',art:'SK-SC-106',name:'BIOAQUA Rice Raw Pulp Mask',cat:'Skincare',color:'Pack of 2',price:229,img:'images/skincare-masks.jpg',desc:'Rice pulp mask — smooth glass-skin texture.',hot:false,active:true},
+  {id:'sk-sc-107',art:'SK-SC-107',name:'BIOAQUA Aloe Soothing Mask',cat:'Skincare',color:'Pack of 2',price:199,img:'images/skincare-masks.jpg',desc:'Aloe vera soothing mask — calm, fresh skin after sun.',hot:false,active:true},
+  {id:'sk-sc-108',art:'SK-SC-108',name:'BIOAQUA Vitamin B5 Mask',cat:'Skincare',color:'Pack of 2',price:189,img:'images/skincare-masks.jpg',desc:'B5 hydrating mask — dry skin ka rescue remedy.',hot:false,active:true},
+  {id:'sk-sc-109',art:'SK-SC-109',name:'Sadoer Niacinamide Eye Mask',cat:'Skincare',color:'Under-Eye Pair',price:259,img:'images/skincare-masks.jpg',desc:'Under-eye niacinamide mask — dark circles ki care.',hot:false,active:true},
+  {id:'sk-sc-110',art:'SK-SC-110',name:'Vitamin C Brightening Cream',cat:'Skincare',color:'50g Tube',price:399,img:'images/skincare-vitc.jpg',desc:'Vitamin C face cream — brightening + even skin tone.',hot:true,active:true},
+  {id:'sk-sc-111',art:'SK-SC-111',name:'Gluta Gleam Whitening Cream',cat:'Skincare',color:'Tube',price:349,img:'images/skincare-wash.jpg',desc:'Whitening cream tube — daily use ke liye light formula.',hot:false,active:true},
+  {id:'sk-sc-112',art:'SK-SC-112',name:'Royal Gold Whitening Soap',cat:'Skincare',color:'100g Bar ✨',price:279,img:'images/soap-gold.jpg',desc:'Royal Gold whitening soap — gold glow bar, 100% formula.',hot:false,active:true},
+  /* ---------- BEAUTY (Rs 150–500) ---------- */
+  {id:'sk-bt-201',art:'SK-BT-201',name:'Golden Perfect 24H Foundation Stick',cat:'Beauty',color:'Shade 130',price:459,img:'images/makeup-stick.jpg',desc:'24-hour full coverage stick foundation — blendable matte finish.',hot:true,active:true},
+  {id:'sk-bt-202',art:'SK-BT-202',name:'Naked Makeup Waterproof BB Cream',cat:'Beauty',color:'Full Coverage',price:379,img:'images/makeup-bb.jpg',desc:'Waterproof BB cream — full coverage jo din bhar tikay.',hot:true,active:true},
+  {id:'sk-bt-203',art:'SK-BT-203',name:'Miss Rose Compact Powder',cat:'Beauty',color:'Gold Box',price:329,img:'images/makeup-compact.jpg',desc:'Miss Rose compact — smooth matte finish, touch-up ready.',hot:false,active:true},
+  {id:'sk-bt-204',art:'SK-BT-204',name:'Pink Shine Lip Gloss',cat:'Beauty',color:'Glossy Pink',price:179,img:'images/makeup-compact.jpg',desc:'Glossy pink lip gloss — everyday shine, student budget.',hot:false,active:true}
+];
+
+/* COLOR DOT COLORS */
+const DOT_COLORS = {'Camel Tan':'#c19a6b','Black + Leopard Scarf':'#1c1c1c','Burgundy + Gold Lock':'#7b2340','Off-White Cream':'#f2ede4','Maroon + Gold Silk Scarf':'#7b2340','Maroon + Rust Ribbon':'#7b2340','Glossy Pink':'#f472b6','Gold Box':'#d4a017','Shade 130':'#e2b88f','Full Coverage':'#e8c9a0'};
+const PH_IMG = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="460"><rect width="100%" height="100%" fill="#ffd9ea"/><text x="50%" y="50%" font-size="80" text-anchor="middle" dominant-baseline="middle">🛍️</text></svg>');
+
+/* STORAGE HELPERS */
+function lsGet(k, fallback){ try{ const v = JSON.parse(localStorage.getItem(k)); return v === null || v === undefined ? fallback : v; }catch(e){ return fallback; } }
+function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+function getSettings(){ return Object.assign({}, DEFAULT_SETTINGS, lsGet(LS.settings, {})); }
+function getProducts(){ const p = lsGet(LS.products, null); return Array.isArray(p) && p.length ? p : DEFAULT_PRODUCTS.slice(); }
+function saveProducts(p){ lsSet(LS.products, p); renderAll(); }
+
+/* SALE ENGINE — hourly random 13%–19% (settings se) */
+function hourBucket(){ return Math.floor(Date.now() / 3600000); }
+function hashStr(s){ let h = 0; for (let i = 0; i < s.length; i++){ h = ((h << 5) - h + s.charCodeAt(i)) | 0; } return Math.abs(h); }
+function salePct(p){
+  const st = getSettings();
+  const lo = Math.min(st.min, st.max), hi = Math.max(st.min, st.max);
+  const span = hi - lo + 1;
+  return lo + (hashStr(p.id + '@' + hourBucket()) % span);
+}
+function salePriceOf(p){
+  const d = salePct(p);
+  return { d: d, price: Math.round((p.price * (100 - d)) / 100 / 10) * 10 };
+}
+function fmt(n){ return 'Rs ' + Number(n).toLocaleString('en-US'); }
+
+/* RENDER PRODUCTS */
+function colorDot(c){ const hex = DOT_COLORS[c] || '#e95c9b'; return `<span class="color-dot" style="background:${hex}"></span>${c}`; }
+function cardHTML(p){
+  const s = salePriceOf(p);
+  const waText = encodeURIComponent(`Assalam-o-Alaikum! Mujhe ye order karna hai:\n\n• ${p.name} (${p.art}) — ${fmt(s.price)} (sale ${s.d}% off)\n\nPlease confirm karein.`);
+  return `<article class="card" data-name="${(p.name+' '+p.art+' '+p.color).toLowerCase()}">
+    <div class="card-img">
+      <img src="${p.img || PH_IMG}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${PH_IMG}'">
+      <span class="badge-sale">🔥 ${s.d}% OFF</span>
+      ${p.hot ? '<span class="badge-hot">⭐ HOT</span>' : ''}
+    </div>
+    <div class="card-body">
+      <span class="art-chip">🏷️ ${p.art}</span>
+      <h3 class="card-name">${p.name}</h3>
+      <span class="color-chip">${colorDot(p.color || '—')}</span>
+      <p class="card-desc">${p.desc || ''}</p>
+      <div class="price-row">
+        <span class="price-now">${fmt(s.price)}</span>
+        <span class="price-old">${fmt(p.price)}</span>
+        <span class="price-save">Save ${fmt(p.price - s.price)}</span>
+      </div>
+      <div class="card-actions">
+        <button class="btn-add" onclick="addToCart('${p.id}')">🧺 Add to Cart</button>
+        <a class="btn-buy" href="https://wa.me/${STORE.waNumber}?text=${waText}" target="_blank" rel="noopener" title="Order on WhatsApp">💬</a>
+      </div>
+    </div>
+  </article>`;
+}
+function renderProducts(){
+  const prods = getProducts().filter(p => p.active !== false);
+  const groups = { Bags: [], Skincare: [], Beauty: [], Haircare: [] };
+  prods.forEach(p => { (groups[p.cat] || (groups[p.cat] = [])).push(p); });
+  const map = { bags:'Bags', skincare:'Skincare', beauty:'Beauty', haircare:'Haircare' };
+  Object.keys(map).forEach(secKey => {
+    const el = document.getElementById('grid-' + secKey);
+    if (!el) return;
+    const list = groups[map[secKey]] || [];
+    el.innerHTML = list.map(cardHTML).join('');
+    const sec = el.closest('section');
+    if (sec) sec.classList.toggle('hide', list.length === 0);
+  });
+  document.getElementById('countBags').textContent = (groups.Bags || []).length;
+  document.getElementById('countSkin').textContent = (groups.Skincare || []).length;
+  document.getElementById('countBeauty').textContent = (groups.Beauty || []).length;
+}
+
+/* SEARCH */
+function wireSearch(){
+  const input = document.getElementById('searchInput');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    const searchSec = document.getElementById('searchSec');
+    const normalSecs = ['bags','skincare','beauty','haircare'].map(k => document.getElementById(k)).filter(Boolean);
+    if (!q){
+      searchSec.classList.add('hide');
+      normalSecs.forEach(s => s.classList.remove('hide'));
+      return;
+    }
+    normalSecs.forEach(s => s.classList.add('hide'));
+    searchSec.classList.remove('hide');
+    const matches = getProducts().filter(p => p.active !== false && (p.name + ' ' + p.art + ' ' + p.color + ' ' + p.desc + ' ' + p.cat).toLowerCase().includes(q));
+    document.getElementById('grid-search').innerHTML = matches.length ? matches.map(cardHTML).join('') : '<div class="cart-empty" style="grid-column:1/-1"><span class="big">🫥</span>Kuch nahi mila — "hobo", "mask" ya "serum" try karein!</div>';
+  });
+}
+
+/* TICKER */
+function renderTicker(){
+  const one = `<span>🔥 <b>FLASH SALE 13%–19%</b> — har ghantay naya discount!</span><span>🚚 Cash on Delivery — All Pakistan</span><span>📲 Easypaisa: <b>0318-8492094</b></span><span>🎒 Made by students, for students</span><span>💬 WhatsApp Orders: <b>0318-8492094</b></span><span>📧 zulkaifakbar6@gmail.com</span>`;
+  document.getElementById('tickerTrack').innerHTML = one + one;
+}
+
+/* COUNTDOWN */
+let lastBucket = hourBucket();
+function tickCountdown(){
+  const ms = 3600000 - (Date.now() % 3600000);
+  const h = Math.floor(ms / 3600000), m = Math.floor((ms % 3600000) / 60000), s = Math.floor((ms % 60000) / 1000);
+  const set = (id, v) => document.getElementById(id).textContent = String(v).padStart(2, '0');
+  set('tH', h); set('tM', m); set('tS', s);
+  if (hourBucket() !== lastBucket){ lastBucket = hourBucket(); renderProducts(); toast('⚡ Naya hourly sale rate apply ho gaya!'); }
+}
+
+/* CART */
+let cart = lsGet(LS.cart, []);
+function cartSave(){ lsSet(LS.cart, cart); renderCart(); }
+function addToCart(id){
+  const p = getProducts().find(x => x.id === id);
+  if (!p) return;
+  const line = cart.find(l => l.id === id);
+  if (line) line.qty++; else cart.push({ id: id, qty: 1 });
+  cartSave();
+  toast(`🧺 "${p.name}" cart mein add ho gaya!`);
+}
+function chQty(id, d){
+  const line = cart.find(l => l.id === id);
+  if (!line) return;
+  line.qty += d;
+  if (line.qty <= 0) cart = cart.filter(l => l.id !== id);
+  cartSave();
+}
+function clearCart(){ cart = []; cartSave(); }
+function cartDetailed(){
+  const prods = getProducts();
+  return cart.map(l => {
+    const p = prods.find(x => x.id === l.id);
+    if (!p) return null;
+    const s = salePriceOf(p);
+    return { p: p, qty: l.qty, d: s.d, unit: s.price, line: s.price * l.qty };
+  }).filter(Boolean);
+}
+function renderCart(){
+  const items = cartDetailed();
+  const count = items.reduce((a, b) => a + b.qty, 0);
+  const total = items.reduce((a, b) => a + b.line, 0);
+  document.getElementById('cartCount').textContent = count;
+  document.getElementById('mbTotal').textContent = fmt(total);
+  const box = document.getElementById('cartItems');
+  if (!items.length){
+    box.innerHTML = '<div class="cart-empty"><span class="big">🛍️</span>Cart khali hai — pehle kuch trendy utha lo!</div>';
+  } else {
+    box.innerHTML = items.map(it => `<div class="cart-item">
+      <img src="${it.p.img}" alt="" onerror="this.onerror=null;this.src='${PH_IMG}'">
+      <div><div class="ci-name">${it.p.name}</div><div class="ci-art">${it.p.art} · ${it.p.color}</div>
+      <div class="qty-ctrl"><button onclick="chQty('${it.p.id}',-1)">−</button><b>${it.qty}</b><button onclick="chQty('${it.p.id}',1)">+</button></div></div>
+      <div style="text-align:right"><div class="ci-price">${fmt(it.line)}</div><div class="ci-art">${it.d}% off</div><button class="mini-btn danger" style="margin-top:6px" onclick="chQty('${it.p.id}',-${it.qty})">Remove</button></div>
+    </div>`).join('');
+  }
+  document.getElementById('cartQty').textContent = count;
+  document.getElementById('cartTotal').textContent = fmt(total);
+}
+
+/* UI HELPERS */
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2600);
+}
+function copyText(txt){
+  if (navigator.clipboard) navigator.clipboard.writeText(txt).then(() => toast('📋 Copy ho gaya: ' + txt));
+  else toast('Number: ' + txt);
+}
+function scrollToId(id){ const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
+function openCart(){ document.getElementById('cartDrawer').classList.add('show'); document.getElementById('overlay').classList.add('show'); }
+function closeAll(){
+  document.querySelectorAll('.drawer, .modal, .overlay').forEach(e => e.classList.remove('show'));
+}
+/* ================= CHECKOUT ================= */
+function payChange(mode){
+  document.getElementById('optCOD').classList.toggle('selected', mode === 'COD');
+  document.getElementById('optEP').classList.toggle('selected', mode === 'EP');
+  document.getElementById('epDetail').classList.toggle('show', mode === 'EP');
+}
+function renderCoSummary(items){
+  const total = items.reduce((a, b) => a + b.line, 0);
+  document.getElementById('coSummary').innerHTML = '<b>🧾 Order Summary</b><br>' + items.map(it => `${it.p.name} ×${it.qty} — ${fmt(it.line)} <span style="color:#b3a6bf">(${it.d}% off)</span>`).join('<br>') + `<br><b style="color:var(--pink-deep)">TOTAL: ${fmt(total)}</b> <span style="font-size:11px;color:#a394b3">(delivery charges confirmation call par)</span>`;
+}
+function openCheckout(){
+  const items = cartDetailed();
+  if (!items.length){ toast('Pehle cart mein kuch add karo! 🧺'); return; }
+  closeAll();
+  renderCoSummary(items);
+  document.getElementById('checkoutFormView').style.display = 'block';
+  document.getElementById('checkoutSuccess').style.display = 'none';
+  document.getElementById('checkoutModal').classList.add('show');
+  document.getElementById('overlay').classList.add('show');
+}
+function orderId(){ return 'SK-' + Date.now().toString(36).toUpperCase().slice(-6); }
+function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+document.getElementById('checkoutForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const items = cartDetailed();
+  if (!items.length) return;
+  const name = document.getElementById('coName').value.trim();
+  const phone = document.getElementById('coPhone').value.trim();
+  const city = document.getElementById('coCity').value.trim();
+  const email = document.getElementById('coEmail').value.trim();
+  const address = document.getElementById('coAddress').value.trim();
+  const notes = document.getElementById('coNotes').value.trim();
+  const pay = document.querySelector('input[name="pay"]:checked').value;
+  if (!name || !phone || !city || !address){ toast('⚠️ Zaroori fields poray karein (naam, phone, city, address)'); return; }
+  if (!/^\+?(92|0)?3\d{2}[- ]?\d{7}$/.test(phone.replace(/[\s-]/g, ''))){ toast('⚠️ Phone number sahi format mein likhein (03XX-XXXXXXX)'); return; }
+  const oid = orderId();
+  const total = items.reduce((a, b) => a + b.line, 0);
+  const order = { id: oid, ts: new Date().toISOString(), customer: { name, phone, city, email, address, notes }, pay: pay, items: items.map(it => ({ art: it.p.art, name: it.p.name, qty: it.qty, unit: it.unit, orig: it.p.price, off: it.d, line: it.line })), total: total };
+  const orders = lsGet(LS.orders, []); orders.unshift(order); lsSet(LS.orders, orders);
+
+  let lines = '';
+  items.forEach((it, i) => { lines += `${i + 1}. ${it.p.name} (${it.p.art}) ×${it.qty} = ${fmt(it.line)} [${it.d}% off]\n`; });
+  const waMsg = `*Student Kart — New Order*\nOrder: *${oid}*\n\nName: ${name}\nPhone: ${phone}\nCity: ${city}\nAddress: ${address}${email ? '\nEmail: ' + email : ''}\nPayment: *${pay}*${notes ? '\nNotes: ' + notes : ''}\n\n*Items:*\n${lines}\n*TOTAL: ${fmt(total)}*\n(delivery charges confirm call par)\n\n— Student Kart website se order`;
+  const waUrl = `https://wa.me/${STORE.waNumber}?text=${encodeURIComponent(waMsg)}`;
+
+  /* email copy (FormSubmit) — best effort, WhatsApp primary hai */
+  const emailBody = {
+    _subject: `🛒 Student Kart Order ${oid} — ${name} (${fmt(total)})`,
+    _template: 'table',
+    _captcha: 'false',
+    'Order ID': oid, 'Customer Name': name, 'Phone/WhatsApp': phone, 'City': city,
+    'Email': email || '—', 'Address': address, 'Payment Method': pay, 'Notes': notes || '—',
+    'Items': items.map(it => `${it.p.name} (${it.p.art}) x${it.qty} = ${fmt(it.line)} [${it.d}% off]`).join(' | '),
+    'TOTAL': fmt(total)
+  };
+  fetch('https://formsubmit.co/ajax/' + STORE.email, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(emailBody) })
+    .then(r => r.json()).then(() => { document.getElementById('osMsg').textContent = 'Email par bhi order pohanch gaya hai ✅. Team jaldi contact karegi InshaAllah!'; })
+    .catch(() => { document.getElementById('osMsg').textContent = '⚠️ Email nahi gaya (FormSubmit activation chahiye — README dekho), lekin WhatsApp order ready hai — Send zaroor dabayein!'; });
+  /* supabase order insert (agar connected hai) */
+  (async () => {
+    const st = getSettings();
+    if (!st.sbUrl || !st.sbKey) return;
+    try { fetch(st.sbUrl.replace(/\/$/, '') + '/rest/v1/orders', { method: 'POST', headers: supaHeaders(st.sbKey), body: JSON.stringify({ id: order.id, created_at: order.ts, customer: order.customer, pay: order.pay, items: order.items, total: order.total, status: 'new' }) }); } catch (e) {}
+  })();
+
+  document.getElementById('checkoutFormView').style.display = 'none';
+  document.getElementById('checkoutSuccess').style.display = 'block';
+  document.getElementById('osId').textContent = 'Order ID: ' + oid;
+  document.getElementById('osWaBtn').href = waUrl;
+  document.getElementById('osMsg').textContent = 'WhatsApp khul raha hai — Send button dabana na bhoolen! 📲';
+  try { window.open(waUrl, '_blank'); } catch (e) {}
+  toast('🎉 Order place ho gaya — WhatsApp par send karein!');
+});
+
+/* CONTACT FORM */
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const name = document.getElementById('cfName').value.trim();
+  const phone = document.getElementById('cfPhone').value.trim();
+  const msg = document.getElementById('cfMsg').value.trim();
+  const status = document.getElementById('cfStatus');
+  if (!name || !phone || !msg){ toast('⚠️ Sab fields bhar dein'); return; }
+  const btn = document.getElementById('cfSubmit');
+  btn.disabled = true; btn.textContent = '⏳ Sending…';
+  try {
+    const r = await fetch('https://formsubmit.co/ajax/' + STORE.email, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ _subject: '📨 Student Kart Contact — ' + name, _captcha: 'false', 'Name': name, 'Phone': phone, 'Message': msg }) });
+    const j = await r.json();
+    status.textContent = j.success === 'true' || j.success === true ? '✅ Message email par pohanch gaya! Tez reply ke liye WhatsApp bhi kar sakte hain.' : '⚠️ Email issue — seedha WhatsApp karein: 0318-8492094';
+    if (j.success === 'true' || j.success === true){ this.reset(); toast('✅ Message bhej diya gaya!'); }
+  } catch (err) {
+    status.textContent = '⚠️ Network issue — WhatsApp karein: 0318-8492094';
+  }
+  btn.disabled = false; btn.textContent = '📨 Send Message';
+});
+
+/* ================= ADMIN ================= */
+function openAdmin(e){
+  if (e) e.preventDefault();
+  document.getElementById('adminModal').classList.add('show');
+  document.getElementById('overlay').classList.add('show');
+  if (sessionStorage.getItem('sk_admin') === '1'){ showAdminPanel(); } else { document.getElementById('adminGate').style.display = 'block'; document.getElementById('adminPanel').style.display = 'none'; }
+}
+function adminLogin(){
+  const v = document.getElementById('adminPass').value;
+  const st = getSettings();
+  if (v && v === st.adminPass){
+    sessionStorage.setItem('sk_admin', '1');
+    showAdminPanel();
+    toast('🔐 Welcome back, Boss! 🫡');
+  } else {
+    const err = document.getElementById('adminGateErr');
+    err.style.display = 'block'; err.textContent = '❌ Ghalat password — dobara try karein.';
+  }
+}
+function adminLogout(){ sessionStorage.removeItem('sk_admin'); document.getElementById('adminGate').style.display = 'block'; document.getElementById('adminPanel').style.display = 'none'; }
+function showAdminPanel(){
+  document.getElementById('adminGate').style.display = 'none';
+  document.getElementById('adminPanel').style.display = 'block';
+  renderAdmin();
+}
+function aTab(id){
+  document.querySelectorAll('.a-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+  document.querySelectorAll('.a-panel').forEach(p => p.classList.toggle('active', p.id === id));
+}
+let editIdx = -1;
+function renderAdmin(){
+  /* products table */
+  const prods = getProducts();
+  document.getElementById('prodCount').textContent = prods.length + ' products';
+  document.getElementById('aTable').innerHTML = '<tr><th></th><th>Name</th><th>Article</th><th>Cat</th><th>Price</th><th>Color</th><th>Status</th><th>Actions</th></tr>' +
+    prods.map((p, i) => `<tr><td><img src="${p.img || PH_IMG}" onerror="this.onerror=null;this.src='${PH_IMG}'"></td><td><b>${esc(p.name)}</b></td><td>${esc(p.art)}</td><td>${esc(p.cat)}</td><td>${fmt(p.price)}</td><td>${esc(p.color)}</td><td>${p.active === false ? '<span style="color:#c02929">Hidden</span>' : 'Active'}</td><td style="white-space:nowrap"><button class="mini-btn" onclick="showProdForm(${i})">✏️</button> <button class="mini-btn danger" onclick="deleteProd(${i})">🗑️</button></td></tr>`).join('');
+  /* orders */
+  const orders = lsGet(LS.orders, []);
+  document.getElementById('aOrdersList').innerHTML = orders.length ? orders.map(o => `<div class="order-detail"><b>${esc(o.id)}</b> · ${new Date(o.ts).toLocaleString()} · <b>${esc(o.pay)}</b> · <b style="color:var(--pink-deep)">${fmt(o.total)}</b><pre>👤 ${esc(o.customer.name)} — ${esc(o.customer.phone)}\n🏙️ ${esc(o.customer.city)}\n🏠 ${esc(o.customer.address)}${o.customer.notes ? '\n📝 ' + esc(o.customer.notes) : ''}\n\n${o.items.map(it => `${it.art} — ${esc(it.name)} ×${it.qty} = ${fmt(it.line)} (${it.off}% off)`).join('\n')}</pre></div>`).join('') : '<div class="cart-empty"><span class="big">📭</span>Abhi koi order nahi aya (is browser se).</div>';
+  /* sale + supa fields */
+  const st = getSettings();
+  document.getElementById('saleMin').value = st.min;
+  document.getElementById('saleMax').value = st.max;
+  document.getElementById('sbUrl').value = st.sbUrl || '';
+  document.getElementById('sbKey').value = st.sbKey || '';
+  document.getElementById('sbTable').value = st.sbTable || 'products';
+  updateAuthState();
+}
+function showProdForm(i){
+  editIdx = i;
+  const prods = getProducts();
+  const f = i >= 0 ? prods[i] : { name: '', art: '', cat: 'Bags', color: '', price: '', img: '', desc: '', hot: false, active: true };
+  document.getElementById('prodFormTitle').textContent = i >= 0 ? '✏️ Edit: ' + f.name : '➕ Naya Product';
+  document.getElementById('pfName').value = f.name; document.getElementById('pfArt').value = f.art;
+  document.getElementById('pfCat').value = f.cat; document.getElementById('pfPrice').value = f.price;
+  document.getElementById('pfColor').value = f.color; document.getElementById('pfImg').value = f.img;
+  document.getElementById('pfDesc').value = f.desc; document.getElementById('pfHot').checked = !!f.hot;
+  document.getElementById('pfActive').checked = f.active !== false;
+  document.getElementById('prodFormWrap').style.display = 'block';
+  document.getElementById('prodFormWrap').scrollIntoView({ behavior: 'smooth' });
+}
+function hideProdForm(){ document.getElementById('prodFormWrap').style.display = 'none'; editIdx = -1; }
+function saveProdForm(){
+  const prods = getProducts();
+  const name = document.getElementById('pfName').value.trim();
+  const price = parseInt(document.getElementById('pfPrice').value, 10);
+  if (!name || !price){ aStatus('aProdStatus', '❌ Name aur price zaroori hain.', 'err'); return; }
+  const obj = {
+    id: document.getElementById('pfArt').value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-') || ('sk-' + Date.now().toString(36)),
+    art: document.getElementById('pfArt').value.trim() || ('SK-' + String(prods.length + 1).padStart(3, '0')),
+    name: name, cat: document.getElementById('pfCat').value,
+    color: document.getElementById('pfColor').value.trim(),
+    price: price, img: document.getElementById('pfImg').value.trim(),
+    desc: document.getElementById('pfDesc').value.trim(),
+    hot: document.getElementById('pfHot').checked, active: document.getElementById('pfActive').checked
+  };
+  if (editIdx >= 0) prods[editIdx] = obj; else prods.push(obj);
+  saveProducts(prods);
+  hideProdForm(); renderAdmin();
+  aStatus('aProdStatus', '✅ Product save ho gaya — website par live hai!', 'ok');
+}
+function deleteProd(i){
+  const prods = getProducts();
+  if (!confirm('"' + prods[i].name + '" delete karna hai?')) return;
+  prods.splice(i, 1);
+  saveProducts(prods); renderAdmin();
+  aStatus('aProdStatus', '🗑️ Product delete ho gaya.', 'ok');
+}
+function resetProducts(){
+  if (!confirm('Sab custom changes hat kar default products wapis aayenge. Confirm?')) return;
+  localStorage.removeItem(LS.products);
+  renderAll(); renderAdmin();
+  aStatus('aProdStatus', '♻️ Defaults restore ho gaye.', 'ok');
+}
+function exportProducts(){
+  const data = JSON.stringify(getProducts(), null, 2);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([data], { type: 'application/json' }));
+  a.download = 'student-kart-products.json'; a.click();
+}
+function importProducts(){
+  const txt = prompt('Export ki hui JSON paste karein:');
+  if (!txt) return;
+  try {
+    const arr = JSON.parse(txt);
+    if (!Array.isArray(arr)) throw 0;
+    saveProducts(arr); renderAdmin();
+    aStatus('aProdStatus', '✅ ' + arr.length + ' products import ho gaye!', 'ok');
+  } catch (e) { aStatus('aProdStatus', '❌ JSON ghalat hai.', 'err'); }
+}
+function saveSale(){
+  const st = getSettings();
+  let lo = parseInt(document.getElementById('saleMin').value, 10) || 13;
+  let hi = parseInt(document.getElementById('saleMax').value, 10) || 19;
+  st.min = lo; st.max = hi;
+  lsSet(LS.settings, st);
+  renderProducts(); renderAdmin();
+  aStatus('aSaleStatus', `✅ Sale range ${lo}%–${hi}% save ho gayi — agli hour refresh se apply hoga.`, 'ok');
+}
+function aStatus(id, msg, cls){
+  const el = document.getElementById(id);
+  el.style.display = 'block'; el.textContent = msg; el.className = 'a-status ' + cls;
+}
+
+/* ================= SUPABASE ================= */
+const SB_TOKEN_KEY = 'sk_sb_token';
+function supaHeaders(key){ return { apikey: key, Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' }; }
+function supaBase(){ const st = getSettings(); return (st.sbUrl || '').replace(/\/$/, ''); }
+function supaConnected(){ const st = getSettings(); return !!(st.sbUrl && st.sbKey); }
+function supaToken(){ return sessionStorage.getItem(SB_TOKEN_KEY) || ''; }
+function authHeaders(){
+  const st = getSettings();
+  return supaHeaders(supaToken() || st.sbKey);
+}
+function updateAuthState(){
+  const el = document.getElementById('sbAuthState');
+  if (!el) return;
+  el.textContent = supaToken() ? '✅ Signed in — Push/Pull ready' : '⛔ Signed out — sirf read chalega';
+}
+async function supaSignIn(){
+  const st = getSettings();
+  const email = document.getElementById('sbEmail').value.trim();
+  const pass = document.getElementById('sbPass').value;
+  if (!supaConnected()){ aStatus('aSupaStatus', '⚠️ Pehle URL + anon key Save & Test karein.', 'err'); return; }
+  aStatus('aSupaStatus', '⏳ Sign in ho raha hai…', 'info');
+  try {
+    const r = await fetch(`${supaBase()}/auth/v1/token?grant_type=password`, { method: 'POST', headers: supaHeaders(st.sbKey), body: JSON.stringify({ email: email, password: pass }) });
+    const j = await r.json();
+    if (!r.ok || !j.access_token){ aStatus('aSupaStatus', '❌ Sign in fail: ' + (j.msg || j.error_description || j.error || r.status), 'err'); return; }
+    sessionStorage.setItem(SB_TOKEN_KEY, j.access_token);
+    updateAuthState();
+    aStatus('aSupaStatus', '✅ Signed in as ' + email + ' — ab Push/Pull use kar sakte hain.', 'ok');
+  } catch (e) { aStatus('aSupaStatus', '❌ ' + e.message, 'err'); }
+}
+function supaSignOut(){ sessionStorage.removeItem(SB_TOKEN_KEY); updateAuthState(); aStatus('aSupaStatus', '🔓 Signed out.', 'info'); }
+async function supaSave(){
+  const st = getSettings();
+  st.sbUrl = document.getElementById('sbUrl').value.trim();
+  st.sbKey = document.getElementById('sbKey').value.trim();
+  st.sbTable = document.getElementById('sbTable').value.trim() || 'products';
+  lsSet(LS.settings, st);
+  if (!st.sbUrl || !st.sbKey){ aStatus('aSupaStatus', '⚠️ URL aur key dono zaroori hain.', 'err'); return; }
+  aStatus('aSupaStatus', '⏳ Testing connection…', 'info');
+  try {
+    const r = await fetch(`${supaBase()}/rest/v1/${st.sbTable}?select=id&limit=1`, { headers: supaHeaders(st.sbKey) });
+    if (r.ok){ aStatus('aSupaStatus', '✅ Connected! Ab Sign In karein (Push ke liye) ya seedha Pull karke dekhein.', 'ok'); }
+    else { const j = await r.json().catch(() => ({})); aStatus('aSupaStatus', '❌ Error ' + r.status + ': ' + (j.message || 'table/RLS check karein — supabase_setup.sql run kiya?'), 'err'); }
+  } catch (e) { aStatus('aSupaStatus', '❌ Network/CORS error — URL check karein: ' + e.message, 'err'); }
+}
+async function supaPull(){
+  if (!supaConnected()){ aStatus('aSupaStatus', '⚠️ Pehle Save & Test karein.', 'err'); return; }
+  const st = getSettings();
+  aStatus('aSupaStatus', '⏳ Pull ho raha hai…', 'info');
+  try {
+    const r = await fetch(`${supaBase()}/rest/v1/${st.sbTable}?select=*&limit=500&order=sort.asc`, { headers: authHeaders() });
+    if (!r.ok){ aStatus('aSupaStatus', '❌ Pull fail — ' + r.status, 'err'); return; }
+    const rows = await r.json();
+    if (!rows.length){ aStatus('aSupaStatus', '⚠️ Table khali hai — pehle Push karein ya Supabase Table Editor mein rows banayein.', 'err'); return; }
+    const prods = rows.map(row => ({ id: row.id, art: row.art || row.id, name: row.name || 'Unnamed', cat: row.cat || 'Bags', color: row.color || '', price: Number(row.price) || 0, img: row.img || '', desc: row.desc || '', hot: !!row.hot, active: row.active !== false }));
+    saveProducts(prods); renderAdmin();
+    aStatus('aSupaStatus', '✅ ' + prods.length + ' products Supabase se load ho gaye — website update ho gayi!', 'ok');
+  } catch (e) { aStatus('aSupaStatus', '❌ ' + e.message, 'err'); }
+}
+async function supaPush(){
+  if (!supaConnected()){ aStatus('aSupaStatus', '⚠️ Pehle Save & Test karein.', 'err'); return; }
+  if (!supaToken()){ aStatus('aSupaStatus', '🔐 Pehle Sign In karein — RLS ki wajah se writes sirf signed-in admin kar sakta hai.', 'err'); return; }
+  const st = getSettings();
+  aStatus('aSupaStatus', '⏳ Push ho raha hai…', 'info');
+  const rows = getProducts().map((p, i) => ({ id: p.id, art: p.art, name: p.name, cat: p.cat, color: p.color, price: p.price, img: p.img, desc: p.desc, hot: !!p.hot, active: p.active !== false, sort: i }));
+  try {
+    const r = await fetch(`${supaBase()}/rest/v1/${st.sbTable}?on_conflict=id`, { method: 'POST', headers: Object.assign(authHeaders(), { Prefer: 'resolution=merge-duplicates' }), body: JSON.stringify(rows) });
+    if (r.ok){ aStatus('aSupaStatus', '✅ ' + rows.length + ' products Supabase mein save ho gaye! Ab har device se Pull karke same data dekh sakte hain.', 'ok'); }
+    else { const j = await r.json().catch(() => ({})); aStatus('aSupaStatus', '❌ Push fail — ' + r.status + ' ' + (j.message || ''), 'err'); }
+  } catch (e) { aStatus('aSupaStatus', '❌ ' + e.message, 'err'); }
+}
+function supaClear(){
+  const st = getSettings();
+  st.sbUrl = ''; st.sbKey = '';
+  lsSet(LS.settings, st);
+  sessionStorage.removeItem(SB_TOKEN_KEY);
+  document.getElementById('sbUrl').value = ''; document.getElementById('sbKey').value = '';
+  updateAuthState();
+  aStatus('aSupaStatus', '🔌 Supabase disconnect ho gaya — site defaults par chal rahi hai.', 'info');
+}
+
+/* ================= INIT ================= */
+function renderAll(){ renderProducts(); renderCart(); }
+document.getElementById('menuBtn').addEventListener('click', () => {
+  const m = document.getElementById('mNav');
+  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+});
+document.getElementById('heroWaBtn').href = `https://wa.me/${STORE.waNumber}?text=${encodeURIComponent('Assalam-o-Alaikum! Student Kart se shopping karni hai — aap latest stock batayein?')}`;
+document.getElementById('epNum').textContent = STORE.easypaisa;
+renderTicker(); renderAll(); wireSearch();
+setInterval(tickCountdown, 1000); tickCountdown();
+if (location.hash === '#admin') openAdmin();
+</script>
+</body>
+</html>
